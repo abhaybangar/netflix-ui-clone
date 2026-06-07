@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Netflix</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <nav style="position: fixed; top: 0; left: 0; right: 0; padding: 20px 8vw; z-index: 10; display: flex; justify-content: space-between; align-items: center;">
+        <img src="images/logo.svg" alt="Netflix Logo" style="width: 130px; cursor: pointer;" onclick="window.location.href='index.html'">
+    </nav>
+
+    <div class="signin-container">
+        <form class="signin-box">
+            <h1>Sign In with OTP</h1>
+
+            <input type="text" id="login-email" placeholder="Email or phone number" required>
+            <input type="text" id="otp-input" placeholder="Enter 6-digit OTP" style="display: none;" required>
+
+            <button type="button" id="send-otp-btn" class="btn-red">Send OTP</button>
+            <button type="submit" id="verify-otp-btn" class="btn-red" style="display: none;">Verify & Sign In</button>
+            <button type="button" id="resend-otp-btn" style="display: none; background: transparent; color: #b3b3b3; border: none; cursor: pointer; font-size: 14px; text-align: right; padding: 0;">Resend OTP</button>
+
+            <p id="error-msg"></p>
+
+            <div class="extra">
+                <label>
+                    <input type="checkbox"> Remember me
+                </label>
+                <a href="#">Need help?</a>
+            </div>
+
+            <p class="signup-link">
+                New to Netflix? <a href="#">Sign up now</a>
+            </p>
+        </form>
+    </div>
+
+    <script src="sign.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Browse</title>
+    <link rel="stylesheet" href="browse.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <img src="images/logo.svg" alt="Netflix Logo" class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+        <div class="nav-right">
+            <span style="margin-right: 20px; font-size: 14px; color: #b3b3b3;" id="user-email"></span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="User Avatar" class="avatar" id="user-avatar" title="Click to logout">
+        </div>
+    </nav>
+
+    <!-- Hero Billboard Section -->
+    <div class="hero-billboard">
+        <div class="hero-content">
+            <h1 class="hero-title">Trending Hits</h1>
+            <p class="hero-description">Watch the most trending movies and TV shows, exclusively on Netflix. Enjoy your premium membership with unlimited access to top-rated content.</p>
+            <div class="hero-buttons">
+                <button class="btn-play" id="play-btn">▶ Play</button>
+                <button class="btn-more-info">ℹ More Info</button>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Movie Sliders -->
+    <div class="sliders-wrapper">
+        <div class="slider-container">
+            <h2 class="slider-title">Trending Now</h2>
+            <div class="slider" id="trending-slider">
+                <img src="https://occ-0-2087-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYWfklg5D5btQoekHBjGHSFXDW_EezXrT97RnSaEwirkVnCt91QaQlcPWCxtfkSrW04hOcHguRrAMgyKTJzs2_PKkFkbs60DHC4.webp?r=05f" class="row-poster" alt="Movie 1">
+                <img src="https://occ-0-2087-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUbFYNcBU1gaF6EH7bkTWUn3QmoX13ZfIY_IahHOvhPNAwqb0UQYrY1QWimr8Bp8V7Oo2UZ4ZAoHqzIvvGStYcj45EeC8v3leqI.webp?r=13c" class="row-poster" alt="Movie 2">
+                <img src="https://occ-0-2087-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABQhWrPgCHhn7j8aaNbS2jn3rpT-vueA4R4BL58AewyD-G2-qAnP5vj1oufu6j1C-_XlWjU7WhV4I21HzbnqFfmbAnX1p4s-uYIY.webp?r=3ea" class="row-poster" alt="Movie 3">
+                <img src="https://occ-0-2087-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaYisXNk8FH9PL2mj9MTYQFgo8G_1gf9k4mgnowFfLbJR7L5TBNRYF-SKVr6UAwN5h8mKsAI4NVk6FdEiwD80OcF1YlhczIguBaD0OspQgWm37MV_sJPNZ_qM5iVWQVDKJs6.webp?r=cca" class="row-poster" alt="Movie 4">
+                <img src="https://occ-0-2087-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcwNE9Jcle0Z1iq7lf3gARn6Uf8-4iauM7BrFJFgOfO0phL9VkUg1P4z6Z4QSxywt9Y7HJYfGcDDCxShjX7kmkl3aL6l8Zs9ibTU7MUaezf34cMKPf3lai_HT1JN2ycl5BqU.webp?r=ed3" class="row-poster" alt="Movie 5">
+                <img src="https://occ-0-2087-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcwMiAXNKvtzgN1Kx06ht1pT-yTXiVSQy0BKogrxRHkSiGZlRtWZbq2ROt1kkWqfM2PWVvgDNFMw73KTzVFP0dnMIY1MsQEVJIeBdS5U2PG52vbiBsX9ajBuOg6ZrWR1H_X-.webp?r=df5" class="row-poster" alt="Movie 6">
+            </div>
+        </div>
+
+        <div class="slider-container">
+            <h2 class="slider-title">Top Picks for You</h2>
+            <div class="slider" id="top-picks-slider">
+                <!-- Reusing some images for the second row but reversing them -->
+                <img src="https://occ-0-2087-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcwMiAXNKvtzgN1Kx06ht1pT-yTXiVSQy0BKogrxRHkSiGZlRtWZbq2ROt1kkWqfM2PWVvgDNFMw73KTzVFP0dnMIY1MsQEVJIeBdS5U2PG52vbiBsX9ajBuOg6ZrWR1H_X-.webp?r=df5" class="row-poster" alt="Movie 6">
+                <img src="https://occ-0-2087-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcwNE9Jcle0Z1iq7lf3gARn6Uf8-4iauM7BrFJFgOfO0phL9VkUg1P4z6Z4QSxywt9Y7HJYfGcDDCxShjX7kmkl3aL6l8Zs9ibTU7MUaezf34cMKPf3lai_HT1JN2ycl5BqU.webp?r=ed3" class="row-poster" alt="Movie 5">
+                <img src="https://occ-0-2087-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaYisXNk8FH9PL2mj9MTYQFgo8G_1gf9k4mgnowFfLbJR7L5TBNRYF-SKVr6UAwN5h8mKsAI4NVk6FdEiwD80OcF1YlhczIguBaD0OspQgWm37MV_sJPNZ_qM5iVWQVDKJs6.webp?r=cca" class="row-poster" alt="Movie 4">
+                <img src="https://occ-0-2087-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABQhWrPgCHhn7j8aaNbS2jn3rpT-vueA4R4BL58AewyD-G2-qAnP5vj1oufu6j1C-_XlWjU7WhV4I21HzbnqFfmbAnX1p4s-uYIY.webp?r=3ea" class="row-poster" alt="Movie 3">
+                <img src="https://occ-0-2087-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUbFYNcBU1gaF6EH7bkTWUn3QmoX13ZfIY_IahHOvhPNAwqb0UQYrY1QWimr8Bp8V7Oo2UZ4ZAoHqzIvvGStYcj45EeC8v3leqI.webp?r=13c" class="row-poster" alt="Movie 2">
+                <img src="https://occ-0-2087-2186.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYWfklg5D5btQoekHBjGHSFXDW_EezXrT97RnSaEwirkVnCt91QaQlcPWCxtfkSrW04hOcHguRrAMgyKTJzs2_PKkFkbs60DHC4.webp?r=05f" class="row-poster" alt="Movie 1">
+            </div>
+        </div>
+    </div>
+
+    <script src="browse.js"></script>
+</body>
+</html>
